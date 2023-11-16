@@ -1794,9 +1794,9 @@ class FormHelper extends Helper
         if ($isUrl) {
             $options['src'] = $caption;
         } elseif ($isImage) {
-            if ($caption{0} !== '/') {
+            if ($caption{0} !== '/') [
                 $url = $this->Url->webroot(Configure::read('App.imageBaseUrl') . $caption);
-            } else {
+             ] else {
                 $url = $this->Url->webroot(trim($caption, '/'));
             }
             $url = $this->Url->assetTimestamp($url);
